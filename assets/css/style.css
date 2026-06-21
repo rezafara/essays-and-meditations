@@ -9,6 +9,7 @@
   --accent-strong: #163f39;
   --link: #1c5d99;
   --shadow: 0 18px 45px rgba(36, 33, 29, 0.08);
+  --font-fa: "Vazirmatn", Tahoma, Arial, sans-serif;
 }
 
 * {
@@ -93,8 +94,13 @@ a:hover {
 
 [dir="rtl"] .eyebrow,
 .rtl-card .eyebrow {
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: var(--font-fa);
   letter-spacing: 0;
+}
+
+[lang="fa"],
+.rtl-card {
+  font-family: var(--font-fa);
 }
 
 .language-grid {
@@ -184,12 +190,12 @@ a:hover {
 
 [dir="rtl"] body,
 [dir="rtl"] .site-main {
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: var(--font-fa);
 }
 
 [dir="rtl"] .site-header,
 [dir="rtl"] .site-nav {
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: var(--font-fa);
 }
 
 @media (max-width: 680px) {
