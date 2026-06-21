@@ -2,15 +2,28 @@
 layout: default
 title: English Essays
 permalink: /en/
+lang: en
+text_direction: ltr
 ---
 
-# English Essays
-
 {% assign essays = site.essays_en | sort: "date" | reverse %}
-{% if essays.size > 0 %}
-{% for essay in essays %}
-- [{{ essay.title }}]({{ essay.url }})
-{% endfor %}
-{% else %}
-No essays yet.
-{% endif %}
+
+<section class="blog-index">
+  <p class="eyebrow">English</p>
+  <h1>Essays</h1>
+
+  {% if essays.size > 0 %}
+  <ol class="essay-list">
+    {% for essay in essays %}
+    <li>
+      <a href="{{ essay.url | relative_url }}">{{ essay.title }}</a>
+      {% if essay.date %}
+      <time datetime="{{ essay.date | date_to_xmlschema }}">{{ essay.date | date: "%B %-d, %Y" }}</time>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p>No essays yet.</p>
+  {% endif %}
+</section>

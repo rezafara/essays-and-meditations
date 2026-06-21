@@ -1,0 +1,224 @@
+:root {
+  color-scheme: light;
+  --bg: #fbfaf7;
+  --text: #24211d;
+  --muted: #6d665c;
+  --line: #ded8ce;
+  --surface: #ffffff;
+  --accent: #23645a;
+  --accent-strong: #163f39;
+  --link: #1c5d99;
+  --shadow: 0 18px 45px rgba(36, 33, 29, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--accent-strong);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.site-title {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.95rem;
+}
+
+.site-main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+.home-page .site-main {
+  max-width: 920px;
+  min-height: calc(100vh - 78px);
+  display: grid;
+  align-items: center;
+}
+
+.language-chooser h1,
+.blog-index h1,
+.essay h1 {
+  margin: 0;
+  color: var(--text);
+  font-size: 2.8rem;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+[dir="rtl"] .eyebrow,
+.rtl-card .eyebrow {
+  font-family: Tahoma, Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.language-card {
+  display: block;
+  min-height: 160px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+.language-card:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.language-name {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.language-desc {
+  display: block;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.blog-index,
+.essay {
+  max-width: 720px;
+}
+
+.essay-list {
+  display: grid;
+  gap: 18px;
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.essay-list li {
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.essay-list a {
+  display: inline-block;
+  color: var(--text);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.essay-list a:hover {
+  color: var(--accent-strong);
+}
+
+.essay-list time,
+.essay-header time {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.essay-header {
+  margin-bottom: 42px;
+}
+
+.essay-content p {
+  margin: 0 0 1.3em;
+}
+
+[dir="rtl"] body,
+[dir="rtl"] .site-main {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+[dir="rtl"] .site-header,
+[dir="rtl"] .site-nav {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+@media (max-width: 680px) {
+  body {
+    font-size: 17px;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .site-main {
+    padding: 40px 20px 72px;
+  }
+
+  .home-page .site-main {
+    min-height: auto;
+    align-items: start;
+  }
+
+  .language-chooser h1,
+  .blog-index h1,
+  .essay h1 {
+    font-size: 2.15rem;
+  }
+
+  .language-grid {
+    grid-template-columns: 1fr;
+  }
+}

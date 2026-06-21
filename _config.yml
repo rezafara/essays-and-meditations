@@ -1,7 +1,10 @@
 title: Essays and Meditations
-description: Personal bilingual essays in English and Persian
-theme: minima
+description: Personal essays in Persian and English
+baseurl: "/essays-and-meditations"
 markdown: kramdown
+
+exclude:
+  - README.md
 
 collections:
   essays_en:

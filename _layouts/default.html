@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" dir="{{ page.text_direction | default: 'ltr' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body class="{{ page.body_class }}">
+    <header class="site-header">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/en/' | relative_url }}">English</a>
+        <a href="{{ '/fa/' | relative_url }}" lang="fa" dir="rtl">فارسی</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      {{ content }}
+    </main>
+  </body>
+</html>
