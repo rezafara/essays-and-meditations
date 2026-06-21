@@ -1,0 +1,12 @@
+title: Essays and Meditations
+description: Personal bilingual essays in English and Persian
+theme: minima
+markdown: kramdown
+
+collections:
+  essays_en:
+    output: true
+    permalink: /en/:name/
+  essays_fa:
+    output: true
+    permalink: /fa/:name/
